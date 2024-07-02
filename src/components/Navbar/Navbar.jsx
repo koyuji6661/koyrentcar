@@ -29,7 +29,7 @@ const Navbar = ({theme, setTheme}) => {
         <div className="flex justify-between items-center">
             <div>
                 <h1 className="text-3xl font-bold font-serif">
-                    Koy Rentcar
+                    Rentcar Koyuji
                 </h1>
             </div>
             <div className="hidden md:block">
