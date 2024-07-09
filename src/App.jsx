@@ -5,6 +5,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import About from './components/About/About'
 import Services from './components/Services/Services'
+import CarList from './components/CarList/CarList'
 
 const App = () => {
 
@@ -39,6 +40,7 @@ React.useEffect(() => {
       <Hero theme={theme}/>
       <About />
       <Services />
+      <CarList />
     </div>
   )
 }
