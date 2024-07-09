@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import About from './components/About/About'
 import Services from './components/Services/Services'
 import CarList from './components/CarList/CarList'
+import Testimonial from './components/Testimonial/Testimonial';
+import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
 
 const App = () => {
 
@@ -35,12 +37,14 @@ React.useEffect(() => {
 }, []);
 
   return (
-    <div>
+    <div className='dark:bg-black dark:text-white'> 
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme}/>
       <About />
       <Services />
       <CarList />
+      <Testimonial />
+      <AppStoreBanner />
     </div>
   )
 }
