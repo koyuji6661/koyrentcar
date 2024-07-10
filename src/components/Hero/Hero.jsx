@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useEffect, useState } from 'react'
 import carPng from '../../assets/car.png'
 import yellowCarPng from '../../assets/banner-car.png'
-
+import AOS from "aos"
 
 const Hero = ({theme}) => {
-  return (
-    <div className='dark:bg-black dark:text-white duration-300 relative -z-20'>
+  useEffect(() => {
+    AOS.refresh();
+  });
+    return (
+    <div className='dark:bg-black dark:text-white duration-300'>
         <div className="container min-h-[620px] flex">
             <div className='grid place-items-center grid-cols-1 sm:grid-cols-2'>
                 <div data-aos="zoom-in" data-aos-duration="1500" className='order-1 sm:order-2'>
