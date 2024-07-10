@@ -37,7 +37,7 @@ React.useEffect(() => {
 }, []);
 
   return (
-    <div className='dark:bg-black dark:text-white'> 
+    <div > 
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme}/>
       <About />
