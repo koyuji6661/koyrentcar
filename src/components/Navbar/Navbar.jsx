@@ -32,7 +32,7 @@ const Navbar = ({theme, setTheme}) => {
         setShowMenu(!showMenu);
     };
   return (
-    <div className="relative z-10 shadow-md w-full dark:bg-dark dark:text-white duration-300">
+    <div className="relative z-10 shadow-md w-full dark:bg-dark dark:text-white duration-300 ">
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
             <div>
@@ -60,7 +60,7 @@ const Navbar = ({theme, setTheme}) => {
                 </ul>
             </nav>
             {/* Mobile View  */}
-            <div className="flex items-center gap-4 md:hidden">
+            <div className="flex items-center  gap-4 md:hidden">
                 {/* dark mode  */}
                 {theme === "dark" ? (
                             <BiSolidSun onClick={() => setTheme("light")}
