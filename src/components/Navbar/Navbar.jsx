@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 import {HiMenuAlt1, HiMenuAlt3} from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
@@ -7,30 +7,45 @@ export const NavLinks = [
     {
         id:"1",
         name: "HOME",
-        link:"/#",
+        link:"#",
     },
     {
         id:"2",
-        name:"CARS",
-        link:"/#cars",
+        name:"ABOUT",
+        link:"#about",
     },
     {
         id:"3",
-        name: "ABOUT",
-        link:"/#about",
+        name: "CARS",
+        link:"#cars",
     },
     {
         id:"4",
-        name: "BOOKING",
-        link:"/#booking",
+        name: "TESTIMONIALS",
+        link:"#testimonials",
     },
 ]
 const Navbar = ({theme, setTheme}) => {
     const [showMenu, setShowMenu] = useState(false);
+    const menuRef = useRef(null);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     };
+
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setShowMenu(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
   return (
     <div className="relative z-10 shadow-md w-full dark:bg-dark dark:text-white duration-300 ">
       <div className="container py-2 md:py-0">
@@ -85,7 +100,9 @@ const Navbar = ({theme, setTheme}) => {
             </div>
         </div>
       </div>
+      <div ref={menuRef}>
       <ResponsiveMenu showMenu={showMenu} />
+      </div>
     </div>
   );
 };

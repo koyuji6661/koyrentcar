@@ -3,6 +3,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { NavLinks } from './Navbar';
 
 const ResponsiveMenu = ({showMenu}) => {
+  
   return (
     <div 
     className={`${
@@ -22,9 +23,10 @@ const ResponsiveMenu = ({showMenu}) => {
         <nav className='mt-12'>
           <ul className='space-y-4 text-xl'> 
             {
-              NavLinks.map((data) => (
-                <li>
-                  <a href={data.link}>{data.name}</a>
+              NavLinks.map(({id, name, link}) => (
+                <li key={id}>
+                  <a href={link}>{name}</a>
+                  {/* <a href={data.link}>{data.name}</a> */}
                 </li>
               ))
             }

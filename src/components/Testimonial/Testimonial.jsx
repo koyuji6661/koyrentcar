@@ -23,7 +23,7 @@ const testimonialsData = [
 ]
 const Testimonial = () => {
   return (
-    <div className='dark:bg-black dark:text-white py-14 sm:pb-24'>
+    <div id='testimonials' className='dark:bg-black dark:text-white py-14 sm:pb-24'>
         <div className="container">
             {/* header */}
             <div className='space-y-4 pb-12'>
