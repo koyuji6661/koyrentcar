@@ -52,7 +52,7 @@ const Navbar = ({theme, setTheme}) => {
         <div className="flex justify-between items-center">
             <div>
                 <span className="text-3xl font-bold font-serif">
-                    Rentcar Koyuji
+                    Koyrentcar
                 </span>
             </div>
             <nav className="hidden md:block">
